@@ -1,0 +1,73 @@
+// 🎯 Estilos específicos de la sección selectSupermarket
+
+.selectSupermarket {
+  @include card;
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.supermarket-btn {
+  @include button-base;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  background-color: white;
+  color: #4caf50;
+  border: 2px solid #4caf50;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  min-height: 120px;
+  width: 100%;
+
+  &:hover {
+    background-color: #4caf50;
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(76, 175, 80, 0.3);
+  }
+
+  &:active {
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 0.75rem;
+    font-size: 1rem;
+    min-height: 100px;
+  }
+}
+
+.supermarket-logo {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.supermarket-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
+}
